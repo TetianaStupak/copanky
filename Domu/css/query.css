@@ -1,0 +1,65 @@
+@media only screen and (max-width: 950px) {
+
+    .mainHeader .logo {
+        padding-left: 10px;
+    }
+    .navigation a {
+        font-size: 16px;
+    }
+
+}
+@media only screen and (max-width: 890px){
+    .checkicon {
+        display: block;
+    }
+    .navigation ul {
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #b4c8e3;
+        text-align: center;
+        transition: all .5s;
+    }  
+    .navigation li {
+        display: block;	
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .navigation li a {
+        font-size: 20px;
+    }
+    a:hover, a.active {
+        background-color: #606160;
+	    color: white;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .span-1-of-2 {
+        width: 100%;
+        margin-left: 15px;
+    }
+    .about-photo {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .blog {
+        display: flex;
+        flex-direction: column;
+    }
+    .kontakt {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
