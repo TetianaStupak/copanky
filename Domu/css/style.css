@@ -13,6 +13,7 @@ body {
     height: 90px;
     width: 100%;
 	position: fixed;
+	z-index: 100;
 }
 .logo {
 	width: 80px;
@@ -68,7 +69,7 @@ a.active, a:hover {
 	background-attachment: fixed; /*fixed img pri scrolling*/
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* background-position: top;*/ 
+	background-position: top; 
 	display: flex;
   	align-items: center;
 }
@@ -152,6 +153,74 @@ a.active, a:hover {
     margin-right: 60px;
     text-align: justify;
 }
+
+/*Portfolio*/
+.portfolio-part {
+	text-align: center;
+	font-size: 35px;
+	margin-bottom: 30px;
+}
+.portfolio {
+	display: flex;
+ 	flex-flow: row nowrap;
+}
+.wrap {
+	width: 100%;
+	height: 100%;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	width: 230px;
+	height: 333px;
+	perspective: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.card img {
+	border-radius: 3px;
+}
+.front, .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+	backface-visibility: hidden;
+	border-radius: 3px;
+}
+.back {
+	background-color: #b4c8e3;
+	transform: rotateY(180deg);
+}
+.back a {
+	text-decoration: none;
+	color:black;
+	font-size: 18px;
+	text-transform: uppercase; /*velikost*/
+	padding: 7px 13px;
+	text-align: center;
+	border-radius: 3px;
+}
+.back a:hover {
+	color: white;
+	background: none;
+
+}
+.card:hover .front {
+	transform: rotateY(180deg);
+}
+.card:hover .back {
+	transform: rotateY(360deg);
+
+}
+
 /*Blog*/
 .blog-header {
 	text-align: center;
@@ -162,7 +231,7 @@ a.active, a:hover {
 	display: flex;
   	flex-direction: row;
   	height: 100%;
-	  text-align: justify;
+	text-align: justify;
 }
 .child-blog {
 	width: 45%;
@@ -215,13 +284,19 @@ a.active, a:hover {
 }
 .box {
 	width: 500px;
-	padding: 10px;
+	padding: 20px;
+	margin-top: 20px;
+	/* position: absolute; */
+	/* transform: translate(%,-90%); */
+	background:#606160;
+	text-align: center;
+	border-radius: 3px;
 }
 .box input[type="text"], .box input[type="email"], textarea {
 	background: none;
-	margin: 10px auto;
+	margin: 2px auto;
 	text-align: center;
-	border: 3px solid #606160;
+	border: 2px solid #fbdcc0;
 	padding: 15px 10px;
 	width: 100%;
 	color: black;
@@ -233,7 +308,7 @@ a.active, a:hover {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
-	border: 2px solid #605160;
+	border: 2px solid #b4c8e3;
 	padding: 15px 40px;
 	width: 100%;
 	outline: none;
@@ -243,17 +318,59 @@ a.active, a:hover {
 	cursor: pointer; /*ручечка*/
 }
 .box input[type="submit"]:hover {
-	background: #fbdcc0;
+	background: #b4c8e3;
 	color: black;
+}
+.kontakt {
+	margin-top: 65px;
+}
+.kontakt h2 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: left;
+	margin-top: 10px;
 }
 .kontakt-mapa {
 	width: 48%;
-	margin: 20px;
-
+	margin: 55px;
 }
 .kontakt-form {
 	width: 35%;
+	margin-left: 82px;
 }
+/*Vyhody-part*/
+.vyhody-part {
+	font-size: 35px;
+	text-align: center;
+}
+.vyhody-btn {
+	background-image: url(../img/vyhody-part.jpg);
+	height: 80vh;
+	width: 100%;
+	background-attachment: fixed; /*fixed img pri scrolling*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	display: flex;
+  	align-items: center;
+}
+.btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6, .btn-7, .btn-8 {
+	display: flex;
+	margin-top: 20px;
+	margin-left: 80px;
+	padding: 10px 20px;
+    color:  black;
+    letter-spacing: 1px;
+    border: 2px solid #606160;
+    border-radius: 3px;
+    background-color: #b4c8e3;
+    text-transform: uppercase;
+    text-decoration: none;
+	transition: all .5s;
+	animation: fromLeft 1s linear;
+}
+
 
 
 

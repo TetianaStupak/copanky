@@ -1,3 +1,23 @@
+@media only screen and (max-width: 1200px) {
+    .kontakt {
+        display: flex;
+        flex-direction: column;
+    }
+    .box {
+        margin-left: 20px;
+        width: 400px;
+    }
+    .kontakt h2 {
+        margin-left: 20px;
+    }
+    .kontakt-mapa {
+        width: 80%;
+    }
+    .kontakt-form {
+        margin-left: 20px;
+    }
+}
+
 @media only screen and (max-width: 950px) {
 
     .mainHeader .logo {
@@ -6,8 +26,12 @@
     .navigation a {
         font-size: 16px;
     }
-
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+    } 
 }
+
 @media only screen and (max-width: 890px){
     .checkicon {
         display: block;
@@ -45,7 +69,6 @@
     .about-photo {
         width: 100%;
     }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -61,5 +84,10 @@
         display: flex;
         flex-direction: column;
     }
+    .child-blog {
+        width: 90%;
+        margin-left: 10px;
+    }
+
 }
 
