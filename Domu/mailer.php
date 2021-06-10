@@ -8,7 +8,7 @@
 
     // Kontroluje data popř. přesměruje na chybovou adresu
     if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: https://www.copanky-cb.cz/index.html?success=-1#form");
+        header("Location: http://www.copanky-cb.cz/index.html?success=-1#form");
         exit;
     }
 
@@ -30,6 +30,6 @@
     mail($recipient, $subject, $email_content, $email_headers);
     
     // Přesměrování na stránku, pokud vše proběhlo v pořádku
-    header("Location:https://www.copanky-cb.cz/dekovaci.html");
+    header("Location:http://www.copanky-cb.cz/dekovaci.html");
 
 ?>
